@@ -1,4 +1,5 @@
 import React from "react";
+import Checkbox from "../../components/checkbox";
 
 import './style.css';
 
@@ -16,17 +17,17 @@ export default function () {
                 <div>
                     <input className="form-control" placeholder={"Logged Access"} />
                     <input className="form-control" placeholder={"File Server Access Required"} />
-                    <label className={`checkbox${jiraChecked ? ' active' : ''}`}>
-                        <span>JIRA Access Required</span>
-                        <input type={"checkbox"} checked={jiraChecked} onChange={() => setJiraChecked(!jiraChecked)} />
-                        <div></div>
-                    </label>
+                    <Checkbox
+                        placeholder={"JIRA Access Required"}
+                        checked={jiraChecked}
+                        onChange={() => setJiraChecked(!jiraChecked)}
+                    />
                     <input className="form-control" placeholder={"Sonar Application"} />
-                    <label className={`checkbox${extraChecked ? ' active' : ''}`}>
-                        <span>Extra Application</span>
-                        <input type={"checkbox"} checked={extraChecked} onChange={() => setExtraChecked(!extraChecked)} />
-                        <div></div>
-                    </label>
+                    <Checkbox
+                        placeholder={"Extra Application"}
+                        checked={extraChecked}
+                        onChange={() => setExtraChecked(!extraChecked)}
+                    />
                     <input className="form-control" placeholder={"Mitel Required"} />
                     <input className="form-control" placeholder={"Mobile Required"} />
                     <input className="form-control" placeholder={"Headset Required"} />
