@@ -1,0 +1,63 @@
+.layout {
+    display: flex;
+    max-height: 100vh;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 5rem;
+    padding: 2rem 0;
+    border-right: 1px solid #f0eded;
+}
+
+.nav menu {
+    flex: 1;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 !important;
+    margin: 0;
+    color: #128296;
+}
+
+.menu li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+nav .account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav .avatar {
+    width: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+nav .avatar img {
+    max-width: 100%;
+}
+
+.container {
+    flex: 1;
+    overflow: auto;
+}
