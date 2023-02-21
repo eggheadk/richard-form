@@ -10,7 +10,13 @@
     height: 100vh;
     width: 5rem;
     padding: 2rem 0;
-    border-right: 1px solid #f0eded;
+    border-right: 1px solid var(--border);
+}
+
+@media (max-width: 767px) {
+    .nav {
+        width: 3rem;
+    }
 }
 
 .nav menu {
@@ -20,20 +26,24 @@
 .menu {
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
 .menu li {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     list-style-type: none;
     padding: 0 !important;
     margin: 0;
-    color: #128296;
+    color: var(--color);
 }
 
 .menu li a {
+    text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -60,4 +70,5 @@ nav .avatar img {
 .container {
     flex: 1;
     overflow: auto;
+    padding: 1rem 1rem;
 }

@@ -1,0 +1,21 @@
+.agency {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem 0;
+}
+
+.agency form {
+    width: 400px;
+    color: var(--color);
+}
+
+.agency h2 {
+    text-align: center;
+}
+
+.agency form >div {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}

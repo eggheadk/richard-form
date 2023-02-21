@@ -1,5 +1,7 @@
 import React from "react";
+import Button from "../../components/button";
 import Checkbox from "../../components/checkbox";
+import Input from "../../components/input";
 
 import './style.css';
 
@@ -15,24 +17,26 @@ export default function () {
                     Let setup the permissions & hardware!
                 </h2>
                 <div>
-                    <input className="form-control" placeholder={"Logged Access"} />
-                    <input className="form-control" placeholder={"File Server Access Required"} />
+                    <Input placeholder={"Logged Access"} />
+                    <Input placeholder={"File Server Access Required"} />
                     <Checkbox
                         placeholder={"JIRA Access Required"}
                         checked={jiraChecked}
                         onChange={() => setJiraChecked(!jiraChecked)}
                     />
-                    <input className="form-control" placeholder={"Sonar Application"} />
+                    <Input placeholder={"Sonar Application"} />
                     <Checkbox
                         placeholder={"Extra Application"}
                         checked={extraChecked}
                         onChange={() => setExtraChecked(!extraChecked)}
                     />
-                    <input className="form-control" placeholder={"Mitel Required"} />
-                    <input className="form-control" placeholder={"Mobile Required"} />
-                    <input className="form-control" placeholder={"Headset Required"} />
+                    <Input placeholder={"Mitel Required"} />
+                    <Input placeholder={"Mobile Required"} />
+                    <Input placeholder={"Headset Required"} />
                 </div>
-                <button type="button" className="btn btn-primary">Next</button>
+                <Button
+                    type="button"
+                >Next</Button>
             </form>
         </div>
     )

@@ -1,0 +1,27 @@
+.react-calendar {
+    width: 100%;
+    border: none !important;
+}
+
+.react-calendar__month-view >div >div >div {
+    gap: calc((100% - 280px) / 6);
+}
+
+.react-calendar__month-view__days {
+    justify-content: flex-start;
+}
+
+.react-calendar .react-calendar__month-view__weekdays__weekday {
+    flex: 0 0 40px !important;
+}
+
+.react-calendar .react-calendar__viewContainer button {
+    flex: 0 0 40px !important;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.react-calendar__tile--active {
+    background: var(--primary);
+}

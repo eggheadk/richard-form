@@ -1,0 +1,19 @@
+.btn {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.8rem;
+}
+
+.btn:hover, .btn:focus, .btn:active {
+    transform: translate(0, -2px);
+}
+
+.btn.btn-primary {
+    background: var(--color);
+    color: var(--light);
+}
+
+.btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active {
+    background: var(--primary);
+}
