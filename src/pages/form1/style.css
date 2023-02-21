@@ -8,7 +8,7 @@
 
 .agency form {
     width: 400px;
-    color: #128296;
+    color: var(--color);
 }
 
 .agency h2 {

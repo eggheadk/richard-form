@@ -1,7 +1,44 @@
-body {
-  color: #128296;
+:root {
+	--light: #FFFFFF;
+	--primary: #0c6372;
+
+	--color: #128296;
+
+	--border: #ecefff;
+	--border-hover: #8ea2ff;
 }
 
-input, button {
-  color: #128296;
+body {
+	color: var(--color);
+}
+
+* {
+	/* transition: border-color ease-in-out .3s,
+		background ease-in-out .3s,
+		transition ease-in-out .3s; */
+}
+
+input,
+button {
+	color: var(--color);
+}
+
+input,
+button,
+a {
+	transition: background ease-in-out 0.2s,
+		border ease-in-out 0.2s,
+		transform ease-in-out 0.2s;
+}
+
+.flex {
+	display: inline-flex;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+.gap {
+	gap: 0.5rem;
 }
