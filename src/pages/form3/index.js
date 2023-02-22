@@ -7,8 +7,16 @@ import './style.css';
 
 export default function () {
 
-    const [jiraChecked, setJiraChecked] = React.useState(true);
-    const [extraChecked, setExtraChecked] = React.useState(false);
+    const [data, setData] = React.useState({
+        loggedChecked: false,
+        fileserverChecked: false,
+        jiraChecked: true,
+        sonarChecked: false,
+        extraChecked: false,
+        mitelChecked: false,
+        mobileChecked: false,
+        headsetChecked: false,
+    });
 
     return (
         <div className="agency">
@@ -17,22 +25,46 @@ export default function () {
                     Let setup the permissions & hardware!
                 </h2>
                 <div>
-                    <Input placeholder={"Logged Access"} />
-                    <Input placeholder={"File Server Access Required"} />
+                    <Checkbox 
+                        placeholder={"Logged Access"} 
+                        checked={data.loggedChecked}
+                        onChange={() => setData({...data, loggedChecked:!data.loggedChecked})}
+                    />
+                    <Checkbox 
+                        placeholder={"File Server Access Required"} 
+                        checked={data.fileserverChecked}
+                        onChange={() => setData({...data, fileserverChecked:!data.fileserverChecked})}
+                    />
                     <Checkbox
                         placeholder={"JIRA Access Required"}
-                        checked={jiraChecked}
-                        onChange={() => setJiraChecked(!jiraChecked)}
+                        checked={data.jiraChecked}
+                        onChange={() => setData({...data, jiraChecked:!data.jiraChecked})}
                     />
-                    <Input placeholder={"Sonar Application"} />
+                    <Checkbox 
+                        placeholder={"Sonar Application"} 
+                        checked={data.sonarChecked}
+                        onChange={() => setData({...data, sonarChecked:!data.sonarChecked})}
+                    />
                     <Checkbox
                         placeholder={"Extra Application"}
-                        checked={extraChecked}
-                        onChange={() => setExtraChecked(!extraChecked)}
+                        checked={data.extraChecked}
+                        onChange={() => setData({...data, extraChecked:!data.extraChecked})}
                     />
-                    <Input placeholder={"Mitel Required"} />
-                    <Input placeholder={"Mobile Required"} />
-                    <Input placeholder={"Headset Required"} />
+                    <Checkbox 
+                        placeholder={"Mitel Required"} 
+                        checked={data.mitelChecked}
+                        onChange={() => setData({...data, mitelChecked:!data.mitelChecked})}
+                    />
+                    <Checkbox 
+                        placeholder={"Mobile Required"} 
+                        checked={data.mobileChecked}
+                        onChange={() => setData({...data, mobileChecked:!data.mobileChecked})}
+                    />
+                    <Checkbox 
+                        placeholder={"Headset Required"} 
+                        checked={data.headsetChecked}
+                        onChange={() => setData({...data, headsetChecked:!data.headsetChecked})}
+                    />
                 </div>
                 <Button
                     type="button"

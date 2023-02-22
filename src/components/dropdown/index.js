@@ -6,16 +6,22 @@ import "./style.css";
 export default function ({ initialLabel, label, onClose, container, ...rest }) {
 
     const [isDropdown, setIsDropdown] = React.useState(false);
-    const boxRef = React.useRef(null);
+    const dropdownRef = React.useRef(null);
 
     React.useEffect(() => {
-        if (boxRef.current) {
-            // boxRef.current.
+        const windowClick = (e) => {
+            if (!dropdownRef.current.contains(e.target)) {
+                setIsDropdown(false);
+            }
         }
+
+        window.addEventListener("click", windowClick);
+
+        return () => window.removeEventListener("click", windowClick);
     }, []);
 
     return (
-        <div className="dropdown">
+        <div ref={dropdownRef} className="dropdown">
             <div className="dropdown-picker" onClick={() => setIsDropdown(!isDropdown)}>
                 <span>
                     {label === undefined
@@ -25,7 +31,7 @@ export default function ({ initialLabel, label, onClose, container, ...rest }) {
                 <Icon icon={"ArrowDown"} />
             </div>
             {container !== undefined && (
-                <div ref={boxRef} className={`dropdown-box ${isDropdown ? 'dropdown-box-show' : 'dropdown-box-hide'}`}>
+                <div className={`dropdown-box ${isDropdown ? 'dropdown-box-show' : 'dropdown-box-hide'}`}>
                     {container(() => setIsDropdown(false))}
                 </div>
             )}
