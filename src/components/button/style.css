@@ -5,8 +5,8 @@
     border-radius: 0.8rem;
 }
 
-.btn:hover, .btn:focus, .btn:active {
-    transform: translate(0, -2px);
+.btn:active {
+    transform: translate(0, 2px);
 }
 
 .btn.btn-primary {
