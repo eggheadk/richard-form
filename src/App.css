@@ -1,15 +1,37 @@
+@font-face {
+	font-family: rubik;
+	src: url(./assets/font/rubik/Rubik-Regular.ttf);
+}
+@font-face {
+	font-family: rubik;
+	src: url(./assets/font/rubik/Rubik-Bold.ttf);
+	font-weight: bold;
+}
+@font-face {
+	font-family: rubik;
+	src: url(./assets/font/rubik/Rubik-Light.ttf);
+	font-weight: lighter;
+}
+@font-face {
+	font-family: rubik;
+	src: url(./assets/font/rubik/Rubik-Italic.ttf);
+	font-style: italic;
+}
+
 :root {
 	--light: #FFFFFF;
-	--primary: #0c6372;
+	--primary: #677294;
 
 	--color: #128296;
 
-	--border: #ecefff;
-	--border-hover: #8ea2ff;
+	--border: #67729429;
+	--border-hover: #67729499;
 }
 
 body {
 	color: var(--color);
+	font-family: rubik;
+	font-size: 1rem;
 }
 
 * {
@@ -29,6 +51,10 @@ a {
 	transition: background ease-in-out 0.2s,
 		border ease-in-out 0.2s,
 		transform ease-in-out 0.2s;
+}
+
+a {
+	color: var(--color);
 }
 
 .flex {

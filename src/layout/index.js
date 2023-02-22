@@ -3,24 +3,54 @@ import { Link } from "react-router-dom";
 
 import './style.css';
 
-import Avatar from '../assets/img/avatar/1.jpg';
+import Avatar from '../assets/img/avatar/avatar.png';
 import Icon from "../components/icon";
 
 const navList = [
     {
-        icon: <Icon icon={"Home"} />,
+        icon: <Icon icon={"Add"} size={"24px"} />,
         label: "Form 1",
         title: "Form 1",
         route: "./form1"
     },
     {
-        icon: <Icon icon={"Home"} />,
+        icon: <Icon icon={"UserAdd"} size={"24px"} />,
+        label: "Form 1",
+        title: "Form 1",
+        route: "./form1"
+    },
+    {
+        icon: <Icon icon={"UserAdd"} size={"24px"} />,
+        label: "Form 1",
+        title: "Form 1",
+        route: "./form1"
+    },
+    {
+        icon: <Icon icon={"UserEdit"} size={"24px"} />,
         label: "Form 2",
         title: "Form 2",
         route: "./form2"
     },
     {
-        icon: <Icon icon={"Home"} />,
+        icon: <Icon icon={"Monitor"} size={"24px"} />,
+        label: "Form 3",
+        title: "Form 3",
+        route: "./form3"
+    },
+    {
+        icon: <Icon icon={"Windows"} size={"24px"} />,
+        label: "Form 3",
+        title: "Form 3",
+        route: "./form3"
+    },
+    {
+        icon: <Icon icon={"Code"} size={"24px"} />,
+        label: "Form 3",
+        title: "Form 3",
+        route: "./form3"
+    },
+    {
+        icon: <Icon icon={"People"} size={"24px"} />,
         label: "Form 3",
         title: "Form 3",
         route: "./form3"
